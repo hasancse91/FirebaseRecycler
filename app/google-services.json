@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "727912045953",
+    "firebase_url": "https://recyclerview-bf3d6.firebaseio.com",
+    "project_id": "recyclerview-bf3d6",
+    "storage_bucket": "recyclerview-bf3d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727912045953:android:eddc2e537fb9ea7a",
+        "android_client_info": {
+          "package_name": "com.mbobiosio.firebaserecycler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727912045953-3vc3tnreb78ukt7cjpakaoed1e3k02l9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIIWpiz_vTXJ_qp3a92BiRgNBYvuauZzM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
