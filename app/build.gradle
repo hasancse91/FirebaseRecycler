@@ -36,6 +36,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     //Expandable Layout Library
-    compile 'net.cachapa.expandablelayout:expandablelayout:[2.7]'
+    compile 'net.cachapa.expandablelayout:expandablelayout:[2.8]'
 }
 apply plugin: 'com.google.gms.google-services'
