@@ -2,6 +2,8 @@ package com.mbobiosio.firebaserecycler.Activity;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -40,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
+//        final SharedPreferences tx = PreferenceManager.getDefaultSharedPreferences(this);
+//        final TextView tx1 = (TextView) this.findViewById(R.id.quote);
+//        tx1.setTextSize(tx.getInt("quote_preference", this.getResources().getInteger(R.integer.google_play_services_version)));
+//        tx1.setText(this.getString(R.string.google_app_id));
+
 
         /*Recycler View */
 
@@ -63,7 +70,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected void populateViewHolder(final DataListHolder viewHolder, ModelClass model, final int position) {
                 viewHolder.setTitle(model.getTitle());
-                viewHolder.setImage(MainActivity.this, model.getImage());
+                viewHolder.setnewDate(model.getNewDate());
+                viewHolder.setQuote(model.getQuote());
+              //  viewHolder.setImage(MainActivity.this, model.getImage());
                 viewHolder.setContent(model.getContent());
                 viewHolder.itemPosition = position;
 
@@ -110,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
             super(itemView);
             mView = itemView;
             cardView = (CardView) mView.findViewById(R.id.recyclerHeader);
+
             expandableLayout = (ExpandableLayout) itemView.findViewById(R.id.expandable_layout);
             expandableLayout.setInterpolator(new OvershootInterpolator());
             data_content = (TextView) mView.findViewById(R.id.content);
@@ -123,10 +133,20 @@ public class MainActivity extends AppCompatActivity {
         public void setContent(String content) {
             data_content.setText(content);
         }
-        public void setImage(Context context, String image) {
-            ImageView data_image = (ImageView) mView.findViewById(R.id.imageViewy);
-            Picasso.with(context).load(image).into(data_image);
+
+        public void setQuote(String quote) {
+            TextView data_quote = (TextView) mView.findViewById(R.id.quote);
+            data_quote.setText(quote);
         }
+        public void setnewDate(String newDate) {
+            TextView data_date = (TextView) mView.findViewById(R.id.publishedDate);
+            data_date.setText(newDate);
+        }
+
+//        public void setImage(Context context, String image) {
+//            ImageView data_image = (ImageView) mView.findViewById(R.id.imageViewy);
+//            Picasso.with(context).load(image).into(data_image);
+//        }
 
     }
 
