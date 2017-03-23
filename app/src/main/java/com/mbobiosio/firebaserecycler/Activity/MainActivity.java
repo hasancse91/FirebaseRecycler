@@ -2,26 +2,23 @@ package com.mbobiosio.firebaserecycler.Activity;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.mbobiosio.firebaserecycler.R;
 import com.mbobiosio.firebaserecycler.model.ModelClass;
-import com.squareup.picasso.Picasso;
 
+import cn.hiroz.uninstallfeedback.FeedbackUtils;
 import net.cachapa.expandablelayout.ExpandableLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,11 +38,6 @@ public class MainActivity extends AppCompatActivity {
         context = this;
 
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-
-//        final SharedPreferences tx = PreferenceManager.getDefaultSharedPreferences(this);
-//        final TextView tx1 = (TextView) this.findViewById(R.id.quote);
-//        tx1.setTextSize(tx.getInt("quote_preference", this.getResources().getInteger(R.integer.google_play_services_version)));
-//        tx1.setText(this.getString(R.string.google_app_id));
 
 
         /*Recycler View */
