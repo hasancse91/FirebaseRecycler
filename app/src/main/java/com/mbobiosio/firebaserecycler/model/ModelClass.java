@@ -6,11 +6,13 @@ package com.mbobiosio.firebaserecycler.model;
 
 public class ModelClass {
 
-    String image, title, content;
+    String image, title, content, newDate, quote;
 
-    public ModelClass(String image, String title, String content) {
+    public ModelClass(String image, String title, String newDate, String quote, String content) {
         this.image = image;
         this.title = title;
+        this.quote = quote;
+        this.newDate = newDate;
         this.content = content;
     }
 
@@ -28,6 +30,18 @@ public class ModelClass {
     }
     public void setTitle(String title) {
         this.title = title;
+    }
+    public String getQuote() {
+        return quote;
+    }
+    public void setQuote(String quote) {
+        this.quote = quote;
+    }
+    public String getNewDate() {
+        return newDate;
+    }
+    public void setNewDate(String newDate) {
+        this.newDate = newDate;
     }
     public String getContent() {
         return content;
