@@ -42,13 +42,21 @@ public class MyAdapterClass extends RecyclerView.Adapter<MyAdapterClass.DataList
             TextView data_title = (TextView) mView.findViewById(R.id.titleText);
             data_title.setText(title);
         }
+        public void setnewDate(String newDate) {
+            TextView data_date = (TextView) mView.findViewById(R.id.publishedDate);
+            data_date.setText(newDate);
+        }
+        public void setQuote(String quote) {
+            TextView data_quote = (TextView) mView.findViewById(R.id.quote);
+            data_quote.setText(quote);
+        }
         public void setContent(String content) {
             TextView data_content = (TextView) mView.findViewById(R.id.content);
             data_content.setText(content);
         }
-        public void setImage(Context context, String image) {
-            ImageView data_image = (ImageView) mView.findViewById(R.id.imageViewy);
-            Picasso.with(context).load(image).into(data_image);
-        }
+//        public void setImage(Context context, String image) {
+//            ImageView data_image = (ImageView) mView.findViewById(R.id.imageViewy);
+//            Picasso.with(context).load(image).into(data_image);
+//        }
     }
 }
